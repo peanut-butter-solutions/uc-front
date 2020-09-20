@@ -1,0 +1,72 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+      "@typescript-eslint",
+      "prettier"
+  ],
+  "settings": {
+      "react": {
+          "version": "detect"
+      }
+  },
+  "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "project": "./tsconfig.json"
+  },
+  "extends": [
+      "airbnb-typescript",
+      "airbnb/hooks",
+      "prettier",
+      "prettier/react",
+      "prettier/@typescript-eslint",
+      "plugin:prettier/recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ],
+  "rules": {
+      "react/jsx-filename-extension": 0,
+      "react/jsx-uses-vars": [
+          2
+      ],
+      "no-underscore-dangle": [
+          "error",
+          {
+              "allow": [
+                  "__REDUX_DEVTOOLS_EXTENSION__"
+              ]
+          }
+      ],
+      "import/no-extraneous-dependencies": 0,
+      "import/prefer-default-export": 0,
+      "react/prop-types": 0,
+      "max-len": 0,
+      "require-jsdoc": 0,
+      "valid-jsdoc": 0,
+      "no-multi-str": 0,
+      "react/no-find-dom-node": 0,
+      "no-console": 0,
+      "indent": "off",
+      "no-use-before-define": 0,
+      "@typescript-eslint/no-use-before-define": [
+          "error",
+          {
+              "typedefs": true,
+              "ignoreTypeReferences": true,
+              "variables": false
+          }
+      ],
+      "linebreak-style": 0,
+      "prettier/prettier": [
+          "error",
+          {
+              "trailingComma": "es5",
+              "singleQuote": true,
+              "printWidth": 130,
+              "endOfLine": "auto",
+              "tabWidth": 2
+          }
+      ]
+  }
+}
